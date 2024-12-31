@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Terms and Conditions',
-  description: 'Terms and Conditions',
+  title: 'Terms and Conditions - Indian e-Visa US',
+  description: 'Terms and conditions for our electronic visa services',
   alternates: {
     canonical: '/terms-and-conditions',
   },
@@ -10,63 +10,142 @@ const page = () => {
   return (
     <div className="container px-4 pb-12 bg-white lg:pt-24 lg:py-10 lg:px-0 md:pt-28 md:pb-0 pt-28">
       <div className="mx-auto">
-        <h1 className="mb-3 text-4xl font-semibold lg:py-6">
+        <h1 className="mb-6 text-4xl font-bold text-gray-900 lg:py-6">
           Terms and Conditions
         </h1>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          By accessing and using our visa application services, you agree to
-          comply with these terms and conditions. These terms may be updated
-          periodically, and continued use of our services implies acceptance of
-          any changes.
+        <p className="my-4 text-lg leading-relaxed text-gray-700">
+          Welcome to Indian e-Visa US. These terms and conditions govern your
+          use of our electronic visa application platform. By accessing our
+          digital services, you agree to comply with these terms.
         </p>
       </div>
 
-      <div className="mx-auto mt-7">
-        <h3 className="mt-2 text-lg font-bold">Service Usage Guidelines</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          Users must:
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Electronic Services
+        </h2>
+        <div className="mt-4 space-y-4">
+          <p className="text-gray-700 leading-relaxed">
+            Our digital platform provides:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Online visa application processing</li>
+            <li>Digital document verification</li>
+            <li>Electronic payment handling</li>
+            <li>Real-time status tracking</li>
+            <li>Online support services</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Digital User Obligations
+        </h2>
+        <div className="mt-4 space-y-4">
+          <p className="text-gray-700 leading-relaxed">
+            When using our e-visa platform, you agree to:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Submit accurate electronic information</li>
+            <li>Upload genuine digital documents</li>
+            <li>Maintain secure account credentials</li>
+            <li>Follow online application procedures</li>
+            <li>Respect digital platform guidelines</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Electronic Payment Terms
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Our digital payment structure includes:
         </p>
-        <ul className="space-y-2 text-base font-medium leading-relaxed text-justify">
-          <li>• Provide accurate and truthful information</li>
-          <li>• Maintain confidentiality of account credentials</li>
-          <li>• Use services only through authorized channels</li>
-          <li>• Comply with all applicable laws and regulations</li>
-          <li>• Accept responsibility for all account activities</li>
+        <ul className="mt-4 list-disc pl-6 space-y-2 text-gray-700">
+          <li>Online processing fees</li>
+          <li>Digital transaction charges</li>
+          <li>Electronic payment security</li>
+          <li>Virtual refund processing</li>
+          <li>Online payment verification</li>
         </ul>
       </div>
 
-      <div className="mx-auto mt-7">
-        <h3 className="mt-2 text-lg font-bold">Service Modifications</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          We reserve the right to modify, suspend, or discontinue any part of
-          our services at our discretion, with or without notice.
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Platform Limitations
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Please note the following digital service parameters:
+        </p>
+        <ul className="mt-4 list-disc pl-6 space-y-2 text-gray-700">
+          <li>E-visa approval decisions rest with authorities</li>
+          <li>Electronic processing times may vary</li>
+          <li>Digital system maintenance periods</li>
+          <li>Online service availability</li>
+        </ul>
+      </div>
+
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Digital Property Rights
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          All electronic content, including software, designs, and digital
+          materials on our platform are protected by intellectual property
+          rights. Unauthorized digital reproduction is prohibited.
         </p>
       </div>
 
-      <div className="mx-auto mt-7">
-        <h3 className="mt-2 text-lg font-bold">Intellectual Property</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          All content, features, and functionality of our platform are protected
-          by intellectual property laws. Unauthorized use or reproduction is
-          strictly prohibited.
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Electronic Security
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Your use of our platform is protected by:
+        </p>
+        <ul className="mt-4 list-disc pl-6 space-y-2 text-gray-700">
+          <li>Digital encryption protocols</li>
+          <li>Secure online transactions</li>
+          <li>Electronic data protection</li>
+          <li>Virtual platform monitoring</li>
+        </ul>
+      </div>
+
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Platform Updates
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          We reserve the right to modify our digital platform and terms. Changes
+          become effective immediately upon online posting. Continued use of our
+          e-services indicates acceptance of modified terms.
         </p>
       </div>
 
-      <div className="mx-auto mt-7">
-        <h3 className="mt-2 text-lg font-bold">Limitation of Liability</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          Our services are provided &quot;as is&quot; without warranties of any
-          kind. We shall not be liable for any damages arising from the use of
-          our services.
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Digital Liability
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Our electronic platform liability is limited to:
         </p>
+        <ul className="mt-4 list-disc pl-6 space-y-2 text-gray-700">
+          <li>Online service fees paid</li>
+          <li>Digital processing errors</li>
+          <li>Electronic system failures</li>
+          <li>Virtual platform issues</li>
+        </ul>
       </div>
 
-      <div className="mx-auto mt-7">
-        <h3 className="mt-2 text-lg font-bold">Account Termination</h3>
-        <p className="my-2 text-base font-medium leading-relaxed text-justify">
-          We maintain the right to suspend or terminate access to our services
-          for any violation of these terms or for any other reason deemed
-          necessary.
+      <div className="mx-auto mt-8">
+        <h2 className="text-2xl font-semibold text-gray-900">
+          Contact Information
+        </h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          For inquiries about these terms or our e-visa services, please contact
+          our online support team at support@indian-evisa.us
         </p>
       </div>
     </div>

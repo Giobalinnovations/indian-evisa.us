@@ -18,24 +18,24 @@ const Header = ({ bgcolor }) => {
     <header
       className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-xl border-b border-gray-100'
-          : 'bg-secondary/80 backdrop-blur-sm'
+          ? 'bg-white/90 backdrop-blur-xl border-b border-purple-100'
+          : 'bg-gray-900/80 backdrop-blur-sm'
       }`}
       style={{ zIndex: 50 }}
     >
       {/* Decorative elements */}
       <div className="absolute inset-0 bg-hex-pattern opacity-5"></div>
       {scrolled ? (
-        <div className="absolute inset-x-0 h-px -bottom-px bg-mesh-gradient"></div>
+        <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r from-transparent via-purple-200 to-transparent"></div>
       ) : (
-        <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r from-transparent via-purple-400/20 to-transparent"></div>
       )}
 
       <nav className="container relative mx-auto">
         <div className="flex items-center justify-between h-20 px-6">
           {/* Logo */}
           <Link href="/" className="relative group">
-            <div className="absolute inset-0 transition-all duration-300 opacity-0 rounded-xl bg-mesh-gradient blur-xl group-hover:opacity-20"></div>
+            <div className="absolute inset-0 transition-all duration-300 opacity-0 rounded-xl bg-gradient-to-r from-purple-100 to-purple-200 blur-xl group-hover:opacity-20"></div>
             <Image
               src={
                 scrolled
@@ -55,8 +55,8 @@ const Header = ({ bgcolor }) => {
             <Link href="/">
               <span
                 className={`nav-item ${
-                  scrolled ? 'text-secondary' : 'text-white'
-                }`}
+                  scrolled ? 'text-gray-900' : 'text-white'
+                } hover:text-purple-600 transition-colors duration-300`}
               >
                 Home
               </span>
@@ -64,8 +64,8 @@ const Header = ({ bgcolor }) => {
             <Link href="/about">
               <span
                 className={`nav-item ${
-                  scrolled ? 'text-secondary' : 'text-white'
-                }`}
+                  scrolled ? 'text-gray-900' : 'text-white'
+                } hover:text-purple-600 transition-colors duration-300`}
               >
                 About
               </span>
@@ -73,15 +73,14 @@ const Header = ({ bgcolor }) => {
             <Link href="/services">
               <span
                 className={`nav-item ${
-                  scrolled ? 'text-secondary' : 'text-white'
-                }`}
+                  scrolled ? 'text-gray-900' : 'text-white'
+                } hover:text-purple-600 transition-colors duration-300`}
               >
                 Services
               </span>
             </Link>
             <Link href="/visa/step-one">
-              <span className="inline-flex items-center px-6 py-2.5 text-sm font-medium text-white rounded-full relative overflow-hidden group">
-                <span className="absolute inset-0 transition-transform duration-500 bg-mesh-gradient group-hover:scale-105"></span>
+              <span className="inline-flex items-center px-6 py-2.5 text-sm font-medium text-white bg-purple-600 rounded-full relative overflow-hidden group hover:bg-purple-700 transition-colors duration-300">
                 <span className="relative flex items-center">
                   Start Application
                   <svg
@@ -108,17 +107,17 @@ const Header = ({ bgcolor }) => {
             className="relative p-2 md:hidden group"
             aria-label="Toggle Menu"
           >
-            <div className="absolute inset-0 transition-colors duration-300 rounded-lg group-hover:bg-primary/5"></div>
+            <div className="absolute inset-0 transition-colors duration-300 rounded-lg group-hover:bg-purple-100/5"></div>
             {isOpen ? (
               <FaTimes
                 className={`w-6 h-6 relative ${
-                  scrolled ? 'text-secondary' : 'text-white'
+                  scrolled ? 'text-gray-900' : 'text-white'
                 }`}
               />
             ) : (
               <FaBars
                 className={`w-6 h-6 relative ${
-                  scrolled ? 'text-secondary' : 'text-white'
+                  scrolled ? 'text-gray-900' : 'text-white'
                 }`}
               />
             )}
@@ -127,18 +126,18 @@ const Header = ({ bgcolor }) => {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute top-full left-0 right-0 transition-all duration-300 bg-white/95 backdrop-blur-xl border-b border-gray-100 md:hidden
+          className={`absolute top-full left-0 right-0 transition-all duration-300 bg-white/95 backdrop-blur-xl border-b border-purple-100 md:hidden
           ${
             isOpen
               ? 'opacity-100 visible translate-y-0'
               : 'opacity-0 invisible -translate-y-4'
           }`}
         >
-          <nav className="divide-y divide-gray-100">
+          <nav className="divide-y divide-purple-100">
             {['Home', 'About', 'Services'].map(item => (
               <Link key={item} href="/" onClick={() => setIsOpen(false)}>
-                <div className="px-6 py-4 transition-colors duration-200 hover:bg-gray-50">
-                  <span className="text-secondary">{item}</span>
+                <div className="px-6 py-4 transition-colors duration-200 hover:bg-purple-50">
+                  <span className="text-gray-900">{item}</span>
                 </div>
               </Link>
             ))}
@@ -146,7 +145,7 @@ const Header = ({ bgcolor }) => {
               <Link
                 href="/visa/step-one"
                 onClick={() => setIsOpen(false)}
-                className="block w-full py-3 text-center text-white transition-opacity duration-200 rounded-lg bg-mesh-gradient hover:opacity-90"
+                className="block w-full py-3 text-center text-white transition-colors duration-200 rounded-lg bg-purple-600 hover:bg-purple-700"
               >
                 Start Application
               </Link>
