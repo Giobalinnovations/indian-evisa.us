@@ -7,6 +7,12 @@ import Banner from '@/components/india/homepage/Banner';
 import { useFormContext } from '@/context/formContext';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import {
+  FaArrowRight,
+  FaEdit,
+  FaCreditCard,
+  FaClipboardCheck,
+} from 'react-icons/fa';
 
 const Home = () => {
   const { dispatch } = useFormContext();
@@ -30,12 +36,47 @@ const Home = () => {
     localStorage.removeItem('formId');
   }, [dispatch]);
 
+  const actionButtons = [
+    {
+      title: 'Apply For INDIA',
+      subtitle: 'Start New Application',
+      icon: <FaArrowRight className="w-5 h-5" />,
+      href: '/visa/step-one',
+      gradientFrom: 'from-primary',
+      gradientTo: 'to-tertiary',
+    },
+    {
+      title: 'Amend or Complete',
+      subtitle: 'Partially Filled Form',
+      icon: <FaEdit className="w-5 h-5" />,
+      onClick: () => setPartiallyFillFormOpen(true),
+      gradientFrom: 'from-accent',
+      gradientTo: 'to-tertiary',
+    },
+    {
+      title: 'Make Payment',
+      subtitle: 'For Completed Form',
+      icon: <FaCreditCard className="w-5 h-5" />,
+      onClick: () => setPaymentForCompletedFormOpen(true),
+      gradientFrom: 'from-success',
+      gradientTo: 'to-tertiary',
+    },
+    {
+      title: 'Visa Status',
+      subtitle: 'Check Application Status',
+      icon: <FaClipboardCheck className="w-5 h-5" />,
+      onClick: () => setVisaStatusFormOpen(true),
+      gradientFrom: 'from-warning',
+      gradientTo: 'to-tertiary',
+    },
+  ];
+
   return (
     <>
       <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100">
         {/* Background Decorations */}
-        <div className="absolute inset-0 bg-gradient-to-b from-orange/5 via-transparent to-primary/5 pointer-events-none"></div>
-        <div className="absolute inset-0 bg-[url('/assets/images/india/common/pattern.png')] bg-repeat opacity-5 pointer-events-none"></div>
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-primary/5 via-transparent to-tertiary/5"></div>
+        <div className="absolute inset-0 bg-repeat pointer-events-none bg-hex-pattern opacity-5"></div>
 
         {/* Main Content */}
         <Banner />
@@ -43,138 +84,21 @@ const Home = () => {
         {/* Action Buttons Section */}
         <div className="container relative w-full py-10 mx-auto">
           <div className="grid grid-cols-1 gap-6 px-4 md:px-6 lg:px-8 md:grid-cols-2 lg:grid-cols-4 auto-rows-fr">
-            {/* Apply for India */}
-            <Link href="/visa/step-one" className="group h-full">
-              <div className="relative flex flex-col h-full p-6 transition-all duration-300 bg-white border border-transparent rounded-xl hover:border-orange/20 hover:shadow-2xl hover:shadow-orange/5 group-hover:scale-[1.02]">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange/10 via-primary/5 to-transparent rounded-bl-full -z-10"></div>
-                <div className="flex flex-col items-center justify-center flex-grow text-center space-y-3">
-                  <span className="text-lg font-semibold text-gray-800">
-                    Apply For INDIA
-                  </span>
-                  <span className="text-sm text-gray-500">
-                    Start New Application
-                  </span>
-                  <span className="inline-flex items-center justify-center w-10 h-10 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-orange to-primary group-hover:scale-110">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17 8l4 4m0 0l-4 4m4-4H3"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </Link>
-
-            {/* Amend or Complete */}
-            <button
-              onClick={() => setPartiallyFillFormOpen(true)}
-              className="group h-full"
-            >
-              <div className="relative flex flex-col h-full p-6 transition-all duration-300 bg-white border border-transparent rounded-xl hover:border-pink/20 hover:shadow-2xl hover:shadow-pink/5 group-hover:scale-[1.02]">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink/10 via-primary/5 to-transparent rounded-bl-full -z-10"></div>
-                <div className="flex flex-col items-center justify-center flex-grow text-center space-y-3">
-                  <span className="text-lg font-semibold text-gray-800">
-                    Amend or Complete
-                  </span>
-                  <span className="text-sm text-gray-500">
-                    Partially Filled Form
-                  </span>
-                  <span className="inline-flex items-center justify-center w-10 h-10 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-pink to-primary group-hover:scale-110">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </button>
-
-            {/* Make Payment */}
-            <button
-              onClick={() => setPaymentForCompletedFormOpen(true)}
-              className="group h-full"
-            >
-              <div className="relative flex flex-col h-full p-6 transition-all duration-300 bg-white border border-transparent rounded-xl hover:border-success/20 hover:shadow-2xl hover:shadow-success/5 group-hover:scale-[1.02]">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-success/10 via-primary/5 to-transparent rounded-bl-full -z-10"></div>
-                <div className="flex flex-col items-center justify-center flex-grow text-center space-y-3">
-                  <span className="text-lg font-semibold text-gray-800">
-                    Make Payment
-                  </span>
-                  <span className="text-sm text-gray-500">
-                    For Completed Form
-                  </span>
-                  <span className="inline-flex items-center justify-center w-10 h-10 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-success to-primary group-hover:scale-110">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </button>
-
-            {/* Visa Status */}
-            <button
-              onClick={() => setVisaStatusFormOpen(true)}
-              className="group h-full"
-            >
-              <div className="relative flex flex-col h-full p-6 transition-all duration-300 bg-white border border-transparent rounded-xl hover:border-brown/20 hover:shadow-2xl hover:shadow-brown/5 group-hover:scale-[1.02]">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brown/10 via-primary/5 to-transparent rounded-bl-full -z-10"></div>
-                <div className="flex flex-col items-center justify-center flex-grow text-center space-y-3">
-                  <span className="text-lg font-semibold text-gray-800">
-                    Visa Status
-                  </span>
-                  <span className="text-sm text-gray-500">
-                    Check Application Status
-                  </span>
-                  <span className="inline-flex items-center justify-center w-10 h-10 text-white transition-transform duration-300 rounded-full bg-gradient-to-r from-brown to-primary group-hover:scale-110">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-                      />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </button>
+            {actionButtons.map((button, index) =>
+              button.href ? (
+                <Link key={index} href={button.href} className="h-full group">
+                  <ActionButton {...button} />
+                </Link>
+              ) : (
+                <button
+                  key={index}
+                  onClick={button.onClick}
+                  className="w-full h-full group"
+                >
+                  <ActionButton {...button} />
+                </button>
+              )
+            )}
           </div>
         </div>
 
@@ -197,5 +121,23 @@ const Home = () => {
     </>
   );
 };
+
+// ActionButton component
+const ActionButton = ({ title, subtitle, icon, gradientFrom, gradientTo }) => (
+  <div className="relative flex flex-col h-full p-6 transition-all duration-300 bg-white border border-transparent rounded-xl hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/5 group-hover:scale-[1.02]">
+    <div
+      className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${gradientFrom} ${gradientTo}/5 to-transparent rounded-bl-full -z-10`}
+    ></div>
+    <div className="flex flex-col items-center justify-center flex-grow space-y-3 text-center">
+      <span className="text-lg font-semibold text-gray-800">{title}</span>
+      <span className="text-sm text-gray-500">{subtitle}</span>
+      <span
+        className={`inline-flex items-center justify-center w-10 h-10 text-white transition-transform duration-300 rounded-full bg-gradient-to-r ${gradientFrom} ${gradientTo} group-hover:scale-110`}
+      >
+        {icon}
+      </span>
+    </div>
+  </div>
+);
 
 export default Home;

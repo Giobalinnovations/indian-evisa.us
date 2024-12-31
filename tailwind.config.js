@@ -8,17 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#4f80c6',
-        secondary: '#1e1e1e',
-        orange: '#ea5f1a',
-        pink: '#c04e94',
-        brown: '#9b6e58',
-        success: '#56a780',
+        primary: '#7c3aed',
+        secondary: '#1e293b',
+        accent: '#f43f5e',
+        tertiary: '#8b5cf6',
+        success: '#10b981',
+        warning: '#f59e0b',
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hex-pattern': "url('/assets/images/hex-pattern.svg')",
+        'mesh-gradient': 'linear-gradient(45deg, #7c3aed 0%, #f43f5e 100%)',
       },
     },
   },

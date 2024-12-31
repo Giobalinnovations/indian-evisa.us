@@ -71,26 +71,48 @@ const ApplySectionContentSection = () => {
   ];
 
   const popularDestinations = [
-    { city: 'Delhi', description: 'Capital city, rich in history and culture' },
-    { city: 'Mumbai', description: 'Financial capital and entertainment hub' },
-    { city: 'Bangalore', description: 'Technology capital of India' },
-    { city: 'Agra', description: 'Home to the iconic Taj Mahal' },
-    { city: 'Jaipur', description: 'The Pink City of royal heritage' },
-    { city: 'Goa', description: 'Tropical paradise with beautiful beaches' },
-    { city: 'Varanasi', description: 'Spiritual capital of India' },
     {
-      city: 'Kerala',
-      description: 'God&apos;s own country with scenic backwaters',
+      city: 'Delhi',
+      description:
+        'Historic capital showcasing ancient architecture and vibrant markets',
+    },
+    {
+      city: 'Mumbai',
+      description: 'Gateway of India and bustling business metropolis',
+    },
+    {
+      city: 'Bangalore',
+      description: 'Innovation hub with year-round spring climate',
+    },
+    {
+      city: 'Jaipur',
+      description: 'Pink City with majestic forts and royal palaces',
+    },
+    {
+      city: 'Kochi',
+      description: 'Coastal gem with rich spice trading history',
+    },
+    {
+      city: 'Ahmedabad',
+      description: 'UNESCO heritage city with unique step-wells',
+    },
+    {
+      city: 'Rishikesh',
+      description: 'Yoga capital nestled in Himalayan foothills',
+    },
+    {
+      city: 'Mysore',
+      description: 'City of Palaces with rich cultural heritage',
     },
   ];
 
   return (
     <div className="text-sm">
-      {/* Header */}
+      {/* Header Section */}
       <div className="relative overflow-hidden rounded-t-xl bg-gradient-to-r from-secondary via-secondary to-primary">
         <div className="absolute inset-0 bg-[url('/assets/images/india/common/pattern.png')] opacity-10"></div>
         <h2 className="relative flex items-center justify-center py-4 text-base font-semibold text-center text-white md:text-lg">
-          Welcome to Indian e-Visa Services
+          Fast-Track Indian e-Visa Processing Portal
         </h2>
       </div>
 
@@ -98,15 +120,15 @@ const ApplySectionContentSection = () => {
       <div className="p-6 space-y-6">
         <div className="space-y-4">
           <h2 className="text-xl font-semibold text-secondary">
-            Your Gateway to Incredible India
+            Your Digital Gateway to Indian Adventures
           </h2>
           <p className="leading-relaxed text-gray-600">
-            India, a land of diverse cultures, rich heritage, and technological
-            advancement, welcomes millions of visitors annually. From ancient
-            temples to modern tech hubs, from the majestic Himalayas to serene
-            coastal beaches, India offers an unparalleled travel experience. Our
-            e-Visa service simplifies your journey to explore this magnificent
-            country.
+            Begin your Indian journey with our state-of-the-art e-Visa platform.
+            From the mystical Himalayan peaks to the tranquil backwaters of
+            Kerala, from ancient temples to modern urban landscapes, access
+            India&apos;s wonders through our efficient digital visa processing
+            system. We transform complex visa procedures into simple,
+            streamlined steps.
           </p>
         </div>
 
@@ -114,19 +136,16 @@ const ApplySectionContentSection = () => {
         <div className="grid gap-4 md:grid-cols-3">
           {[
             {
-              title: 'Quick Processing',
-              description:
-                'Fast and efficient visa processing with digital verification',
+              title: 'Swift Processing',
+              description: 'Rapid visa processing with live status updates',
             },
             {
-              title: 'Secure Platform',
-              description:
-                'State-of-the-art security for your personal information',
+              title: 'Secure Systems',
+              description: 'Bank-grade security protocols for data protection',
             },
             {
-              title: '24/7 Support',
-              description:
-                'Round-the-clock assistance for your visa applications',
+              title: 'Global Support',
+              description: 'Multi-lingual assistance across time zones',
             },
           ].map((feature, index) => (
             <div
@@ -144,11 +163,12 @@ const ApplySectionContentSection = () => {
         {/* Eligible Countries Section */}
         <div className="p-6 space-y-4 bg-gray-50 rounded-xl">
           <h2 className="text-lg font-semibold text-secondary">
-            Eligible Countries for e-Visa
+            International e-Visa Accessibility
           </h2>
           <p className="text-gray-600">
-            Citizens of the following countries can apply for an Indian e-Visa.
-            The process is completely online and user-friendly.
+            Seamless e-Visa processing available for travelers from eligible
+            nations. Experience our efficient digital application system with
+            quick turnaround times.
           </p>
           <div className="flex flex-wrap gap-2">
             {eligibleCountries.map((country, index) => (
@@ -165,7 +185,7 @@ const ApplySectionContentSection = () => {
         {/* Popular Destinations */}
         <div className="space-y-4">
           <h2 className="text-lg font-semibold text-secondary">
-            Popular Destinations
+            Must-Visit Indian Destinations
           </h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {popularDestinations.map((dest, index) => (
@@ -183,27 +203,25 @@ const ApplySectionContentSection = () => {
         {/* About Section */}
         <div className="p-6 space-y-4 bg-gradient-to-r from-orange/5 to-primary/5 rounded-xl">
           <h2 className="text-lg font-semibold text-secondary">
-            Why Choose Indian e-Visa?
+            Advanced e-Visa Solutions
           </h2>
           <div className="space-y-4 text-gray-600">
             <p>
-              The Indian e-Visa system represents a significant advancement in
-              facilitating international travel to India. This digital platform
-              offers a streamlined, efficient process for obtaining travel
-              authorization, eliminating the need for physical visa
-              applications.
+              Leverage our cutting-edge digital platform for seamless visa
+              processing. We combine technological innovation with expert
+              service to deliver a superior visa application experience.
             </p>
             <p>
-              With multiple categories including tourist, business, and medical
-              visas, the system caters to diverse travel needs. The platform
-              ensures secure, swift processing while maintaining the highest
-              standards of security and verification.
+              Access multiple visa categories - from tourism and business to
+              medical and conference visas. Our intelligent system guides you
+              through category-specific requirements, ensuring accurate
+              submissions every time.
             </p>
             <p>
-              Whether you&apos;re exploring India&apos;s rich cultural heritage,
-              pursuing business opportunities, or seeking medical treatment, our
-              e-Visa service provides a convenient gateway to your Indian
-              journey.
+              Benefit from our end-to-end digital solution, featuring automated
+              updates, secure payment channels, and expert application review.
+              We&apos;ve optimized every aspect to make your Indian visa
+              acquisition smooth and efficient.
             </p>
           </div>
         </div>
